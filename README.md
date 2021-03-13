@@ -1,7 +1,6 @@
-
 # horizontalBarChartDemo
 
-https://user-images.githubusercontent.com/6469823/111030120-a9f59600-8426-11eb-8cab-863495cb92ea.mov
+<img width="363" alt="horizontalBarChart" src="https://user-images.githubusercontent.com/6469823/111032382-e5499200-8431-11eb-9f34-04d590edc91a.png">
 
 
 
