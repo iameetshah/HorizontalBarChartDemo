@@ -1,4 +1,9 @@
+
 # horizontalBarChartDemo
+
+https://user-images.githubusercontent.com/6469823/111030120-a9f59600-8426-11eb-8cab-863495cb92ea.mov
+
+
 
 For Alignment created Custom Renderer :- CustomHorizontalXAxisRenderer
 
