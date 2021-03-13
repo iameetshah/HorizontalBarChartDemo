@@ -2,7 +2,9 @@
 
 For Alignment created Custom Renderer :- CustomHorizontalXAxisRenderer
 
+
 Default : Right Alignment
+
 **For Left Aligment** :-
 [
 
@@ -10,7 +12,7 @@ Default : Right Alignment
    let actualSize = label.size(withAttributes: [.font: xAxis.labelFont])
    let newPositionX = pos - (maxWidth - actualSize.width)](url)
    
-   
+  
 **For Center Alignment** :-
 label.padding(toLength: 16, withPad: " ", startingAt: 0)// Update from 16 as per your needs
     
