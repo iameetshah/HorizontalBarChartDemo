@@ -1,6 +1,6 @@
 # horizontalBarChartDemo
 
-Chart Library :- https://github.com/danielgindi/Charts
+Chart Library Used :- https://github.com/danielgindi/Charts
 
 <img width="363" alt="horizontalBarChart" src="https://user-images.githubusercontent.com/6469823/111032382-e5499200-8431-11eb-9f34-04d590edc91a.png">
 
