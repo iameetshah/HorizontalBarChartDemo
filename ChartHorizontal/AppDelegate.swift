@@ -34,3 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension String {
+    func truncate(_ length: Int, trailing: String = "") -> String {
+        (self.count > length) ? self.prefix(max(0, length - trailing.count)) + trailing : self
+    }
+}

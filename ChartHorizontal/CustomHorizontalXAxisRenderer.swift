@@ -42,7 +42,7 @@ class CustomHorizontalXAxisRenderer: XAxisRendererHorizontalBarChart {
             
             if viewPortHandler.isInBoundsY(position.y) {
                 if let label = xAxis.valueFormatter?.stringForValue(xAxis.entries[index], axis: xAxis) {
-                    let maxWidth:CGFloat = 96// Update as per your needs
+                    let maxWidth:CGFloat = 132// Update as per your needs
                     let actualSize = label.size(withAttributes: [.font: xAxis.labelFont])
                     let newPositionX = pos - (maxWidth - actualSize.width)
                     

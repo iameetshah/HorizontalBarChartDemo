@@ -21,20 +21,21 @@ class ViewController: UIViewController {
 
     let unitsSold = [0.1, 0.7, 0.9, 1.1, 1.6, 13.5, 20.3, 61.2]
     let unitsSold2 = [0.5, 2.0, 4.4, 93.1]
-    var singleLineCategory1 = ["Category 1", "Category 2", "Category 3", "Category 4", "Category 5", "Category 6", "Category 7", "Category 8"]
-    var singleLineCategory2 = ["Category 1", "Category 2", "Category 3", "Category 4"]
+    var singleLineCategory1 = ["Small Category1", "Medium Category 11", "Medium Category 12", "Medium Category 13", "Small Category2", "Medium Category 14", "Medium Category 15", "Very very Big Category 1"]
+    var singleLineCategory2 = ["Small Category1", "Small Category2", "Small Category3", "Small Category 4"]
+    
     func setupChart() {
         setupGraphSettings()
         setDataForSegmentFirst()
-
     }
+    
     @objc func segmentedControlDidChange(_ sender:UISegmentedControl) {
         let index = sender.selectedSegmentIndex
         switch index {
         case 0:
             setDataForSegmentFirst()
         default:
-          setDataForSegmentSecond()
+            setDataForSegmentSecond()
         }
     }
     func setupGraphSettings() {
@@ -104,7 +105,8 @@ class ViewController: UIViewController {
 
     func setDataForSegmentFirst() {
         hBarChartView.data = nil
-        hBarChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: singleLineCategory1)
+        let truncatedCategory = singleLineCategory1.map { $0.truncate(18) }
+        hBarChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: truncatedCategory)
 
 
         var arrEntries = [BarChartDataEntry]()
@@ -118,7 +120,7 @@ class ViewController: UIViewController {
         let arrarDataSet = dataSetWith(entries: arrEntries,
                                             colors: [UIColor.cyan],
                                              highlightColor: UIColor.black,
-                                             label: "label")
+                                             label: "label1")
 
         let barData = BarChartData(dataSet: arrarDataSet)
         setupPercentValueFormatter(barData: barData)
@@ -131,19 +133,16 @@ class ViewController: UIViewController {
         hBarChartView.data = nil
         hBarChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: singleLineCategory2)
 
-
         var arrEntries = [BarChartDataEntry]()
 
         for interval in 0..<unitsSold2.count {
             arrEntries.append(BarChartDataEntry(x: Double(interval), y: Double(unitsSold2[interval])))
         }
 
-
-
         let arrarDataSet = dataSetWith(entries: arrEntries,
                                             colors: [UIColor.blue],
                                              highlightColor: UIColor.black,
-                                             label: "label")
+                                             label: "label2")
 
         let barData = BarChartData(dataSet: arrarDataSet)
         setupPercentValueFormatter(barData: barData)
