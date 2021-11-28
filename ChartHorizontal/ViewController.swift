@@ -19,10 +19,10 @@ class ViewController: UIViewController {
         setupChart()
     }
 
-    let unitsSold = [0.1, 0.7, 0.9, 1.1, 1.6, 13.5, 20.3, 61.2]
-    let unitsSold2 = [0.5, 2.0, 4.4, 93.1]
+    let unitsSold = [0.1, 0.7, 0.9, 11.1, 11.6, 13.5, 20.3, 41.2]
+    let unitsSold2 = [0.5, 2.0, 2.1, 2.3, 15.1, 15.5, 18.4, 44.1]
     var singleLineCategory1 = ["Small Category1", "Medium Category 11", "Medium Category 12", "Medium Category 13", "Small Category2", "Medium Category 14", "Medium Category 15", "Very very Big Category 1"]
-    var singleLineCategory2 = ["Small Category1", "Small Category2", "Small Category3", "Small Category 4"]
+    var singleLineCategory2 = ["Medium Category 01", "Medium Category 02", "Small Category1", "Very very Big Category 1", "Small Category2", "Small Category3", "Medium Category 03", "Small Category4"]
     
     func setupChart() {
         setupGraphSettings()
@@ -81,11 +81,7 @@ class ViewController: UIViewController {
 
 
         /* Renderer */
-        hBarChartView.xAxisRenderer = CustomHorizontalXAxisRenderer(
-            viewPortHandler: hBarChartView.viewPortHandler,
-            xAxis: xAxis,
-            transformer:hBarChartView.getTransformer(forAxis: .left),
-            chart: hBarChartView)
+        hBarChartView.xAxisRenderer = CustomHorizontalXAxisRenderer(viewPortHandler:hBarChartView.viewPortHandler, xAxis: xAxis, transformer:hBarChartView.getTransformer(forAxis: .left), chart: hBarChartView)
 
 
     }
@@ -131,7 +127,8 @@ class ViewController: UIViewController {
     }
     func setDataForSegmentSecond() {
         hBarChartView.data = nil
-        hBarChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: singleLineCategory2)
+        let truncatedCategory = singleLineCategory2.map { $0.truncate(18) }
+        hBarChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: truncatedCategory)
 
         var arrEntries = [BarChartDataEntry]()
 
