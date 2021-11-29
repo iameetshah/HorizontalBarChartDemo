@@ -1,6 +1,7 @@
-# horizontalBarChartDemo
+# Horizontal Bar Chart with X-Axis Custom Renderer
 
 Chart Library Used :- https://github.com/danielgindi/Charts
+
 **Actual Result**
 <img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Actual_result_Segment1.png">
 <img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Actual_result_Segment2.png">
