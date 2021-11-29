@@ -3,10 +3,13 @@
 Chart Library Used :- https://github.com/danielgindi/Charts
 
 **Actual Result**
+
 <img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Actual_result_Segment1.png">
 <img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Actual_result_Segment2.png">
 
+
 **Expected Result**
+
 <img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Expected_result_Segment1.png">
 <img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Expected_result_Segment2.png">
 
