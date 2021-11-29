@@ -1,15 +1,15 @@
 # horizontalBarChartDemo
 
 Chart Library Used :- https://github.com/danielgindi/Charts
+**Actual Result**
+<img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Actual_result_Segment1.png">
+<img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Actual_result_Segment2.png">
 
-<img width="363" alt="horizontalBarChart" src="https://user-images.githubusercontent.com/6469823/111032382-e5499200-8431-11eb-9f34-04d590edc91a.png">
+**Expected Result**
+<img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Expected_result_Segment1.png">
+<img width="280" alt="horizontalBarChart" src="https://iameetshah.github.io/assets/Expected_result_Segment2.png">
 
-
-
-For Alignment created Custom Renderer :- CustomHorizontalXAxisRenderer
-
-
-Default : Right Alignment
+**Default** : Right Alignment
 
 **For Left Aligment** :-
 
@@ -20,6 +20,8 @@ Default : Right Alignment
   
 **For Center Alignment** :-
 label.padding(toLength: 16, withPad: " ", startingAt: 0)// Update from 16 as per your needs
+
+Link:-https://iameetshah.github.io/jekyll/2021/11/29/horizontalChart.html
     
     
    
